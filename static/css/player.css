@@ -1,0 +1,106 @@
+body{
+    background-color: rgb(20, 191, 216);
+    
+}
+
+
+#basic-info > p{
+    margin: 0%;
+     /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    text-align:center;
+}
+
+
+
+.stats-region1{
+    overflow: hidden;
+     display: flex;
+    /* align-items: center; 
+    justify-content: center; */
+}
+
+
+.stats-section{
+    /* border-color:black; */
+    border-style: solid;
+    margin: 5%;
+    border-width: 0.25rem;
+    background-color: honeydew;
+    /* float: left; */
+    width: 90%;
+    /* padding-left: 10%; */
+    text-align:center;
+}
+
+/* .stats-section > h1, .stats-section > p{
+    padding-left: 40%;
+    
+} */
+
+#battle-info2{
+    /* float:right; */
+}
+
+.stats-header{
+    text-align: center;
+}
+
+#name{
+    font-weight: bold;
+    font-size: 200%;
+}
+
+#tag{
+    /* font-family:cursive; */
+    font-size: 80%;
+    color: rgb(59, 58, 58);
+}
+
+#trophies{
+    font-weight: normal;
+    font-size: 80%;
+}
+
+#clan{
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#clan-tag{
+    font-size: 80%;
+    color: rgb(59, 58, 58);
+}
+
+.forminline{
+    width: 500rem;
+    height:500rem;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+}
+
+.upcoming-chest-region{
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.upcoming-chest-region > h1{
+    text-decoration: underline;
+}
+
+.chest-display{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chest{
+    padding: 1rem;
+    text-align: center;
+}
+

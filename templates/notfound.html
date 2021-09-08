@@ -1,0 +1,19 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/header.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/notfound.css' %}"/>
+    </head>
+    <body>
+        <header>
+            <h1>Clash Stats</h1>
+            <a href="{% url 'home' %}">
+                <img src="{% static 'images/clash-king.png' %}" height="80rem" width="67rem">
+            </a>
+        </header>
+        <section class="middle">
+            <h1>Player not found</h1>
+            <a href="{% url 'home' %}">return to home</a>
+        </section>
+    </body>
+</html>

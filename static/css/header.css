@@ -1,0 +1,29 @@
+header{
+    text-align: center;
+    /* width: auto; */
+  }
+
+
+.bold{
+    font-weight: bold;
+}
+
+.underlined{
+    text-decoration: underline;
+}
+
+.middle{
+    border-color:black;
+    border-style: solid;
+    margin: 1rem;
+    border-width: 0.25rem;
+    background-color: honeydew;
+    height: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+body{
+    height: 100%;
+}

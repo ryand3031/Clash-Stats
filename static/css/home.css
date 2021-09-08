@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(20, 191, 216);
+    text-align: center;
+  }
+
+#player-search{
+    padding: 2rem;
+
+}
+
+.hints{
+    color: gray;
+}

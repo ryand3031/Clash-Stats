@@ -1,0 +1,40 @@
+
+{% load static %}
+
+<!DOCTYPE html>`
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/header.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/home.css' %}"/>
+    </head>
+    <body>
+        <header>
+            <h1>Clash Stats</h1>
+            <a href="{% url 'home' %}">
+                <img src="{% static 'images/clash-king.png' %}" height="80rem" width="67rem">
+            </a>
+        </header>
+        <section class="middle">
+            <section id="player-search">
+            <form method="GET" action="/search/">
+                <label for="pid">Player ID</label><br>
+                <input type="text" name="pid" id="pid"><br>
+                <input type="submit" value="Search" id="submitButton">
+            </form>
+            <p class="hints"> 
+                (with or without #)<br>
+                ex. ##YQJVLLY8, pu9crlqjp, or #QP022PLJV 
+            </p>
+            </section>
+        </section>
+        
+        <!-- <label for="pid">Player ID</label><br>
+        <input type="text" name="pid" id="pid"><br>
+        <button id="search_player">Search</button> -->
+        <!-- <p>Player Name: <div id="pname"></div> </p> -->
+        <!--<script>
+            document.querySelector("#pname")
+        </script>-->
+        <!-- <script src="clash.js"></script> -->
+    </body>
+</html>

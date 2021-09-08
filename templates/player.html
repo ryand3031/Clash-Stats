@@ -1,0 +1,90 @@
+
+{% load static %}
+
+<!DOCTYPE html>`
+<html>
+    <head>
+        <title>clash stats for {{name}}</title>
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="{% static 'css/header.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/player.css' %}"/>
+    </head>
+    <body>
+
+        <header>
+            <h1>Clash Stats</h1>
+            <a href="{% url 'home' %}">
+                <img src="{% static 'images/clash-king.png' %}" height="80rem" width="67rem">
+            </a>
+        </header>
+        <section class="middle">
+            <section id="basic-info">
+                <p id="name">{{name}}
+                    <span id="trophies" class="col-sm-6 order-1">
+                        {{trophies}}
+                        <img class="col-sm-6 order-2" src="http://clashroyale.wiki/wp-content/uploads/2016/03/trophy.png" height="20rem" width="20rem">
+                    </span>
+                </p>
+                <p id="tag">{{tag}}</p>
+                    
+                    
+                <p id="clan">
+                    <img src="https://pixelcrux.com/Clash_Royale/Clan_Manager/Icon.png" height="30rem" width="30rem">
+                    {{clan.name}}&#160 
+                    <span id="clan-tag">{{clan.tag}}</span>
+                </p>
+            </section>
+            <section class="stats-region1">
+                <section class="stats-section" id="battle-info">
+                    <h1 class="stats-header">Battle Stats 
+                        <img src="https://royaleapi.com/static/img/ui/battle.png" height="30rem" width="30rem">
+                    </h1>
+                    <p>total battles: {{battleCount}}</p>
+                    <p>wins: {{wins}}</p>
+                    <p>losses: {{losses}}</p>
+                    <p>win rate: {{winRate}}%</p>
+                    <p>three crown wins: {{threeCrownWins}}</p>
+                    <p>three crown rate: {{threeCrownRate}}%</p>
+                </section>
+                <section class="stats-section" id="league-info">
+                    <h1 class="stats-header">League Stats 
+                        <img src="https://royaleapi.com/static/img/ui/rank.png" height="30rem" width="30rem">
+                    </h1>
+                    <p>Trophies: {{trophies}}</p>
+                    <p>Arena: {{arena.name}}</p>
+                    <p>Season Highest Trophies: {{leagueStatistics.currentSeason.bestTrophies}}</p>
+                    <p>Best Season Trophies: {{leagueStatistics.bestSeason.trophies}}</p>
+                    <p>Max Trophies: {{bestTrophies}}</p>
+                </section>
+            </section>
+            <section class="stats-region2">
+                <section class="stats-section" id="battle-info">
+                    <h1 class="stats-header">Clan Stats 
+                        <img src="https://pixelcrux.com/Clash_Royale/Clan_Manager/Icon.png" height="30rem" width="30rem">
+                    </h1>
+                    <p>Clan Name: {{clan.name}}</p>
+                    <p>Clan Tag: {{clan.tag}}</p>
+                    <p>Donations: {{donations}}</p>
+                    <p>Donations Received: {{donationsReceived}}</p>
+                    <p>Total Donations: {{totalDonations}}</p>
+                    <p>War Day Wins: {{warDayWins}}</p>
+                    <p>Clan Cards Collected: {{clanCardsCollected}}</p>
+                </section>
+            </section>
+            <section class="upcoming-chest-region">
+                <h1 >Upcoming Chests</h1>
+                <section class="chest-display">
+                    {% for chest in chestInfo.items %}
+                        <section class="chest">
+                            {% with  'images/chests/'|add:chest.name|add:'.png' as imagePath %}
+                                <img src="{% static imagePath %}" alt="" height="30rem" width="30rem">
+                            {% endwith %}
+                            <p>{{chest.index|add:1}}</p>
+                        </section>
+                    {% endfor %}
+                </section>
+            </section>
+        </section>
+    </body>
+</html>
