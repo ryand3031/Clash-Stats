@@ -16,7 +16,7 @@ def player_page(request, player_id):
     return render(request, 'player.html', playerInfo)
 
 def search(request):
-    if request.method == 'GET':
+    if request.method == 'GET' and request.GET['pid'] :
         pid = request.GET['pid'].upper()
         #print(pid[1:])
         if(pid[0]=='#'):
